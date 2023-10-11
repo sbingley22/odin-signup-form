@@ -81,7 +81,60 @@
 
 .signup-text-container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    background-color: #f8f8f8;
+    padding: 25px;
+}
+.signup-text-container p {
+    font-weight: bold;
+    font-size: large;
+    margin-top: 20px;
+}
+
+.signup-info-container {
+    flex: 1;
+    background-color: #fcfcfc;
+    padding: 25px;
+}
+
+.signup-inner-container {
+    display: flex;
+}
+
+.signup-inner-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.signup-button-container {
+    padding: 25px;
+    flex: 1;
+    background-color: #dfdfdf;
+}
+.signup-button-container button{
+    background-color: #596D48;
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+label {
+    margin-top: 20px;
+    display: block;
+    flex: 1;
+}
+
+input {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+a {
+    display: inline;
 }
