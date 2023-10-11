@@ -76,7 +76,7 @@
 .signup-container {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 2;
 }
 
 .signup-text-container {
@@ -119,6 +119,7 @@ em {
     padding: 25px;
     flex: 1;
     background-color: #dfdfdf;
+    padding-bottom: auto;
 }
 .signup-button-container button{
     background-color: #596D48;

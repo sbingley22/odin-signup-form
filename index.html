@@ -22,6 +22,7 @@
             </div>
         </div>
         <div class="signup-container">
+            <form action="" method="post">
             <div class="signup-text-container">
                 <p>This is not a real online service! You know you need something like this in your life to help you realie your deepest dreams. Signup <em>now</em> to get started.</p>
                 <p>You <em>know</em> you want to.</p>
@@ -29,33 +30,50 @@
             <div class="signup-info-container">
                 <h1>Let's do this!</h1>
                 <div class="signup-inner-container">
-                    <form action=""></form>
-                    <div class="signup-inner-col">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password">
-                    </div>
-                    <div class="signup-inner-col">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name">
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="phone" id="phone">
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password">
-                    </div>
+                    <!-- <form action="#" method="post"> -->
+                        <div class="signup-inner-col">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" id="first-name">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password">
+                            <span id="password-error"></span>
+                        </div>
+                        <div class="signup-inner-col">
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" id="last-name">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="phone" id="phone">
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm-password">
+                        </div>
+                    <!-- </form> -->
                 </div>
             </div>
             <div class="signup-button-container">
-                <button>Create Account</button>
+                <button id="button-submit" type="submit">Create Account</button>
                 <div>
                     <span>Already have an account?</span>
                     <a href="">Log in</a>
                 </div>
             </div>
+        </form>
         </div>
     </div>
+    <script>
+        pass1 = document.querySelector("#password")
+        pass2 = document.querySelector("#confirm-password")
+        passErr = document.querySelector("#password-error")
+
+        const checkPass = () => {
+            if (pass1 != pass2){
+                passErr.textContent = "* Make sure passwords match!"
+            }
+}
+
+        buttonSubmit = document.querySelector("#button-submit")
+        buttonSubmit.addEventListener("click", checkPass)
+    </script>
 </body>
 </html>
